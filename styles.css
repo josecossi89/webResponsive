@@ -198,7 +198,7 @@ section .container a:hover {
     cursor: pointer;
   }
 
-  nav .container li:hover {
+  nav .container ul li:hover {
     background: var(--color-tertiary);
   }
 
@@ -211,6 +211,9 @@ section .container a:hover {
     font-size: 1.5rem;
   }
 
+  p {
+    padding: 1rem;
+  }
   section .container a {
     padding: 1rem 2rem;
   }
