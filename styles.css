@@ -202,7 +202,7 @@ section .container a:hover {
     background: var(--color-tertiary);
   }
 
-  section .contaioner h1 {
+  section .container h1 {
     font-size: 5.3rem;
   }
 
