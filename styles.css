@@ -15,16 +15,6 @@
   list-style: none;
 }
 
-.container {
-  width: 86%;
-  margin: 0, auto;
-}
-
-a {
-  color: white;
-  font-size: 0.9rem;
-}
-
 body {
   font-family: monserrat, sans-serif;
   background: url("./images/background.jpg") no-repeat center center/cover;
@@ -41,6 +31,8 @@ nav {
 }
 
 nav .container {
+  width: 86%;
+  margin: 0, auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,7 +44,7 @@ nav .container img {
   width: 3.2rem;
 }
 
-nav .container input,
+nav .container #showNav,
 nav .container #toggleNav {
   display: none;
 }
@@ -63,10 +55,13 @@ nav .container ul {
 }
 
 a {
+  color: var(--color-light);
+  text-transform: uppercase;
+  font-size: 0.8rem;
   transition: all 300ms ease;
 }
 
-nav a:hover {
+a:hover {
   color: var(--color-tertiary);
 }
 
@@ -110,7 +105,7 @@ section .container input[type="search"] {
 
 section .container input[type="search"]::placeholder {
   color: var(--color-light);
-  letter-spacing: 00.1rem;
+  letter-spacing: 0.1rem;
 }
 
 section .container p {
@@ -158,11 +153,11 @@ section .container a:hover {
 }
 
 /*====== MEDIA QUERY SMALLER SCREENS ======*/
-@media screen and (max-width: 700) {
+@media screen and (max-width: 700px) {
   /* Navigation Bar */
   nav .container {
     width: 100%;
-    padding: 1rem 0;
+    padding: 1rem;
     background: var(--color-secondary);
   }
   nav img {
@@ -170,8 +165,16 @@ section .container a:hover {
   }
 
   /* SHOW NAVIGATION MENU ON CHECKED */
+
   nav .container #showNav:checked ~ ul {
     display: block;
+  }
+
+  nav .container ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
   }
 
   nav .container #toggleNav {
@@ -187,14 +190,7 @@ section .container a:hover {
     color: var(--color-tertiary);
   }
 
-  nav .container ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-  }
-
-  nav .container li {
+  nav .container ul li {
     text-align: center;
     background: var(--color-primary);
     padding: 2rem 0;
